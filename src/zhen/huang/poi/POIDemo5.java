@@ -15,12 +15,16 @@ public class POIDemo5
 {
 	public static void main(String[] args) throws IOException
 	{
+		//得到一个输入流
 		InputStream inputStream = new FileInputStream("D:\\名单.xls");
 
+		//将输入流加到POI的文件系统中
 		POIFSFileSystem fs = new POIFSFileSystem(inputStream);
 
+		//创建一个工作簿,构造参数中加入POI的文件接口
 		HSSFWorkbook hssfWorkbook = new HSSFWorkbook(fs);
 
+		//创建sheet
 		HSSFSheet hssfSheet = hssfWorkbook.getSheetAt(0);
 
 		if (hssfSheet == null)
@@ -28,6 +32,7 @@ public class POIDemo5
 			return;
 		}
 
+		//按照 行/单元格 循环 sheet
 		for (int rowNum = 0; rowNum <= hssfSheet.getLastRowNum(); rowNum++)
 		{
 			HSSFRow hssfRow = hssfSheet.getRow(rowNum);
@@ -45,9 +50,7 @@ public class POIDemo5
 				}
 				System.out.println(getValue(hssfCell));
 			}
-
 			System.out.println("\n");
-
 		}
 
 	}
