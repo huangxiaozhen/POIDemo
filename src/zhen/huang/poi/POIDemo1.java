@@ -1,6 +1,5 @@
 package zhen.huang.poi;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -9,6 +8,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 
 public class POIDemo1  
 {
+	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException
 	{
 
