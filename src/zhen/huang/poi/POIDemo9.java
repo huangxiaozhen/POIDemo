@@ -15,6 +15,7 @@ import org.apache.poi.ss.util.CellRangeAddress;
  */
 public class POIDemo9
 {
+	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException
 	{
 		Workbook workbook = new HSSFWorkbook();
