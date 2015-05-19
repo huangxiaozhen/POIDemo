@@ -15,7 +15,7 @@ POIDemo6.java   提取 excel 文本操作
 
 POIDemo7.java   单元格对齐样式
 
-POIDemo8.java   设置工作簿单元格边框样式 利用cellStyle.setBorderXXX 与 cellStyle.SetXXXBorDerColor()
+POIDemo8.java   设置工作簿单元格边框样式 利用cellStyle.setBorderXXX
 
 POIDemo9.java   单元格合并
 
