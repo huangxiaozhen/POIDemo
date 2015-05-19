@@ -3,7 +3,9 @@ package zhen.huang.poi;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.IndexedColors;
@@ -22,26 +24,15 @@ public class POIDemo8
 		Workbook workbook = new HSSFWorkbook();
 		Sheet sheet = workbook.createSheet("第一页");
 		Row row = sheet.createRow(2);
-		Cell cell = row.createCell(2);
-		cell.setCellValue("hello");
 		
-		CellStyle cellStyle = workbook.createCellStyle();
+		Cell cell2 = row.createCell(4);
+		cell2.setCellValue("hello2");
+		CellStyle cellStyle2 = workbook.createCellStyle();
+		cellStyle2.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);
+		cellStyle2.setFillForegroundColor(IndexedColors.RED.getIndex());
+		cell2.setCellStyle(cellStyle2);
 		
-		cellStyle.setBorderBottom(CellStyle.BORDER_THIN);
-		cellStyle.setBottomBorderColor(IndexedColors.RED.getIndex());
-		
-		cellStyle.setBorderLeft(CellStyle.BORDER_THIN);
-		cellStyle.setLeftBorderColor(IndexedColors.GREEN.getIndex());
-		
-		cellStyle.setBorderTop(CellStyle.BORDER_DASHED);
-		cellStyle.setTopBorderColor(IndexedColors.RED.getIndex());
-		
-		cellStyle.setBorderRight(CellStyle.BORDER_THIN);
-		cellStyle.setRightBorderColor(IndexedColors.RED.getIndex());
-		
-		cell.setCellStyle(cellStyle);
-		
-		FileOutputStream fileOutputStream = new FileOutputStream("D:\\工作簿1.xls");
+		FileOutputStream fileOutputStream = new FileOutputStream("D:\\工作簿2.xls");
 		workbook.write(fileOutputStream);
 		fileOutputStream.close();
 		
