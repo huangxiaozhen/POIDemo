@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -13,6 +12,7 @@ import org.apache.poi.poifs.filesystem.POIFSFileSystem;
 
 public class POIDemo5
 {
+	@SuppressWarnings("resource")
 	public static void main(String[] args) throws IOException
 	{
 		//得到一个输入流

@@ -1,17 +1,11 @@
 package zhen.huang.poi;
 
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Workbook;
-
-
-
-
-
 
 import zhen.huang.object.Customer;
 import zhen.huang.object.Student;
@@ -20,7 +14,7 @@ import zhen.huang.utils.Utils;
 //通用的导出模板
 public class POIDemo15
 {
-	@SuppressWarnings({ "unused", "resource" })
+	@SuppressWarnings({ "resource" })
 	public static void main(String[] args) throws Exception
 	{
 		// 1. 客户导出
