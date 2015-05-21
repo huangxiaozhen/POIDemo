@@ -19,7 +19,7 @@ import com.conf.object.CustomerFieldValue;
 
 //客户导出模板 包含自定义字段 第一行表头 第二行 模板数据
 //此程序为自己基于公司Saas 平台上写的，不能直接运行
-public class POIDdemo15
+public class POIDemo16
 {
 	// 客户导入参考模板
 	@Command

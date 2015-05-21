@@ -27,3 +27,10 @@ POIDemo13.java  测试自定义格式
 POIDemo14.java  批量导出
 
 POIDemo15.java  通用的导出模板  Customer 和 Student 的案例
+
+POIDemo16.java  导入模板参考 这是一个系统中的一部分，程序不能直接运行。
+                导入模板包含标题以及一行模板数据，模板数据根据不同类型有不同数据
+                
+POIDemo17.java  批量导出客户固定字段以及自定义字段程序
+                
+
